@@ -1,0 +1,20 @@
+header div.contenedor {
+    max-width: 1200px;
+    margin: 10px auto;
+}
+header div.contenedor a {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    min-height: 100px;
+}
+header nav.home {
+   justify-content: flex-start;
+    display: inline-block;
+    margin: 50px 80px;
+}
+header nav.home a{
+    color: black; 
+    text-decoration: none;
+    padding: 10px; 
+}
