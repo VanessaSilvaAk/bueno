@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+div.main-card{
+    position: relative;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+div.card-horizontal img{
+    width: 55%;
+    height: auto;
+    float: left;
+    padding: 10px;
+}
+div.card-horizontal div.card-horizontal-content{
+    width: 42%;
+    height: auto;
+    float: right;
+    text-align: center;
+    margin-top: 30px;
+}
+div.main-card-right{
+    position: relative;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+div.card-horizontal-right img{
+    width: 42%;
+    height: auto;
+    float: right;
+    padding: 10px;
+}
+div.card-horizontal-right div.card-horizontal-content{
+    width: 55%;
+    height: auto;
+    float: left;
+    text-align: center;
+    margin-top: 30px;
+}
+h4{
+    display: block;
+    color: #b0c364;
+    font-size: 12px;
+}
+p{
+    color: #7a7a7a;
+    font-size: 0.8em;
+    line-height: 2.5em;
+}
+time{
+    color: #7a7a7a;
+    font-size: 10px;
+    padding: 5px 10px 20px 10px;
+    display: block;
+}
+div.card-horizontal-button{
+    padding: 20px 20px 10px 20px;
+}
+div button{
+    background-color: #b0c364;
+    color: white;
+    font-weight: bold;
+    padding: 15px 40px 15px 40px;
+    border: none;
+}
+.clear-float {
+    clear: both;
+}
