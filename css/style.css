@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+/* Seccion Header */
 header {
     display: flex;
     position: sticky;
@@ -32,7 +33,7 @@ header nav.home a{
     text-decoration: none;
     padding: 10px; 
 }
-
+/*****/
 
 
 /*CARRUSEL 2*/
@@ -97,7 +98,7 @@ section.awSlider div.carousel div.carousel-inner div.carousel-caption{
     /*bottom: 100;
     left: 100; */
     margin: 150px 150px;
-    background-color: rgba(255, 255, 255, 0.795);
+   /* background-color: rgba(255, 255, 255, 0.795);*/
     padding:  10px;
     color: black;
 }
@@ -130,6 +131,7 @@ div.main-container-images-fondo{
     text-align: center;
     align-items: center;
     justify-content: center;
+
 }  
 
 div.main-container-images-marco {
@@ -138,12 +140,26 @@ div.main-container-images-marco {
     width: 80%;
     margin: 10px;
     align-items: center;
+    color: black;
 }
+
 div.main-container-images-marco p{
     margin-bottom: 2px;
+    
+    
 }
 div.main-container-images-marco h2{
     margin-top: 2px;
+
+}
+
+.main-container-images-marco a {
+  text-decoration: none;
+  color: black;
+}
+.main-container-images-marco a:hover {
+  text-decoration: none;
+  color: black;
 }
 /*Cards Segunda seccion Cesar*/
 div.main-card{
