@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+    <title>CodePen - Bootstrap Carousel with Ambilight</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <a href="">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div>
+        <nav class="home">
+            <a href="index.html">Home</a>
+            <a href="Life.html">Life&Tips</a>
+            <a href="">En 1 2 3</a>
+            <a href="">Heanthy</a>
+            <a href="">Postres y Bebidas</a>
+            <a href="">Slow food</a>
+        </nav>
+    </header>
+    <section class="awSlider">
+        <div class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+                <li data-target=".carousel" data-slide-to="0" class=""></li>
+                <li data-target=".carousel" data-slide-to="1" class=""></li>
+                <li data-target=".carousel" data-slide-to="2" class="active"></li>
+                <li data-target=".carousel" data-slide-to="3" class=""></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item">
+                    <img src="images/comida1.png">
+                    <div class="carousel-caption">
+                        <div class="main-container-images-fondo">
+
+                            <div class="main-container-images-marco">
+                                <p>THE BEST </p>
+                                <h2>Healthy Food</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/comida2.png">
+                    <div class="carousel-caption"></div>
+                </div>
+                <div class="item active">
+                    <img src="images/comida3.png">
+                    <div class="carousel-caption"></div>
+                </div>
+                <div class="item">
+                    <img src="images/p1.jpg">
+                    <div class="carousel-caption"></div>
+                </div>
+            </div>
+
+            <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Geri</span>
+            </a>
+            <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">İleri</span>
+            </a>
+        </div>
+        <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-1051.jpg">
+    </section>
+    <script
+        src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script id="rendered-js">
+        $('section.awSlider .carousel').carousel({
+            pause: "hover",
+            interval: 2000
+        });
+
+
+        var startImage = $('section.awSlider .item.active > img').attr('src');
+        $('section.awSlider').append('<img src="' + startImage + '">');
+
+        $('section.awSlider .carousel').on('slid.bs.carousel', function () {
+            var bscn = $(this).find('.item.active > img').attr('src');
+            $('section.awSlider > img').attr('src', bscn);
+        });
+
+
+        /*
+            Philips ambilight tv
+            Üzerine gleince duruyor slide
+            */
+      //# sourceURL=pen.js
+    </script>
+
+
+    <!-- CARDS -->
+
+    <div id="main-container">
+        <section id="cards-food">
+            <div class="container">
+
+                <div class="main-container-images">
+
+                    <img src="images/card1.png">
+
+
+                    <div class="main-container-images-fondo">
+
+                        <div class="main-container-images-marco">
+                            <a href="">
+                                <p>THE BEST </p>
+                                <h2>Healthy Food</h2>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="main-container-images">
+
+                    <img src="images/card2.png">
+
+                    <div class="main-container-images-fondo">
+
+                        <div class="main-container-images-marco">
+                            <a href="">
+                                <p>THE BEST </p>
+                                <h2>Organic Cuisine</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-container-images">
+
+                    <img src="images/card3.png">
+
+                    <div class="main-container-images-fondo">
+
+                        <div class="main-container-images-marco">
+                            <a href="">
+                                <p>THE BEST </p>
+                                <h2>Vegetarian Food</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="big-card-left">
+        <div class="main-card">
+            <div class="card-horizontal">
+                <div class="card-horizontal-image">
+                    <img src="https://i.imgur.com/WjZmfUO.jpg" alt="Huevos con Jamón">
+                </div>
+                <div class="card-horizontal-content">
+                    <h4>HEALTHY</h4>
+                    <h2>Fried Eggs with Ham</h2>
+                    <time datetime="2020-02-25 09:04">March 3,2020 / BY JULIA STILES</time>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aspernatur iure dicta ea. Enim
+                        beatae atque, sapiente suscipit ducimus facilis, sint tenetur quas quo debitis alias quae
+                        tempora
+                        aut qui! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem cumque sequi molestias
+                        earum dolore minus nihil accusamus quia nisi dolor excepturi, tempora autem quod iste facilis
+                        doloribus asperiores saepe. Neque!</p>
+                    <div class="card-horizontal-button">
+                        <a href="#"><button>Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear-float"></div>
+
+        </div>
+    </section>
+
+
+    <section id="big-card-right">
+        <div class="main-card-right">
+            <div class="card-horizontal-right">
+                <div class="card-horizontal-image">
+                    <img src="https://i.imgur.com/WjZmfUO.jpg" alt="Huevos con Jamón">
+                </div>
+                <div class="card-horizontal-content">
+                    <h4>HEALTHY</h4>
+                    <h2>Fried Eggs with Ham</h2>
+                    <time datetime="2020-02-25 09:04">March 3,2020 / BY JULIA STILES</time>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aspernatur iure dicta
+                        ea.
+                        Enim
+                        beatae atque, sapiente suscipit ducimus facilis, sint tenetur quas quo debitis alias
+                        quae
+                        tempora
+                        aut qui! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem cumque sequi
+                        molestias
+                        earum dolore minus nihil accusamus quia nisi dolor excepturi, tempora autem quod iste
+                        facilis
+                        doloribus asperiores saepe. Neque!</p>
+                    <div class="card-horizontal-button">
+                        <a href="#"><button>Read More</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clear-float"></div>
+        </div>
+    </section>
+
+    <!--  Vane  -->
+
+    <section class="gen">
+        <section>
+            <div class="main-content">
+                <div class="main-content-image">
+                    <img src="images/imagen1.PNG">
+                </div>
+                <div class="main-content-third">
+                    <div class="main-content-h1">
+                        <p>THE BEST</p>
+                    </div>
+                    <div class="main-content-h2">
+                        <h2>Friend eggs with ham</h2>
+                        <div class="main-content-date">
+                            <time datetime="01-02-2010">JULY 11, 2018 / BY JULIA STILES</time>
+                        </div>
+                    </div>
+                    <div class="main-content-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc</br>
+                            tristique justo id elit bibendum pharetra non vitae lectus. Mauris</br>
+                            libero felis, dapibus a ultrices sed, commodo vitae odio. Sed</br>
+                            auctor tellus quis arcu tempus.
+                        </p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+
+            <div class="main-content">
+                <div class="main-content-image">
+                    <img src="images/imagen2.PNG">
+                </div>
+                <div class="main-content-third">
+                    <div class="main-content-h1">
+                        <p>THE BEST</p>
+                    </div>
+                    <div class="main-content-h2">
+                        <h2>Mushrooms with pork chop</h2>
+                        <div class="main-content-date">
+                            <time datetime="01-02-2010">JULY 11, 2018 / BY JULIA STILES</time>
+                        </div>
+                    </div>
+                    <div class="main-content-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc</br>
+                            tristique justo id elit bibendum pharetra non vitae lectus. Mauris</br>
+                            libero felis, dapibus a ultrices sed, commodo vitae odio. Sed</br>
+                            auctor tellus quis arcu tempus.
+                        </p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+
+            <div class="main-content">
+                <div class="main-content-image">
+                    <img src="images/imagen3.PNG">
+                </div>
+                <div class="main-content-third">
+                    <div class="main-content-h1">
+                        <p>THE BEST</p>
+                    </div>
+                    <div class="main-content-h2">
+                        <h2>Birthday cake with chocolate</h2>
+                        <div class="main-content-date">
+                            <time datetime="01-02-2010">JULY 11, 2018 / BY JULIA STILES</time>
+                        </div>
+                    </div>
+                    <div class="main-content-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc</br>
+                            tristique justo id elit bibendum pharetra non vitae lectus. Mauris</br>
+                            libero felis, dapibus a ultrices sed, commodo vitae odio. Sed</br>
+                            auctor tellus quis arcu tempus.
+                        </p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </section>
+
+
+
+        <section>
+            <div class="todo">
+                <div class="todo-imagen">
+                    <img src="images/imagenc1.PNG">
+                </div>
+                <div class="todito">
+                    <div class="todo-h1">
+                        <h1>Friend eggs with</br>
+                            ham</h1>
+                        <div class="todo-date">
+                            <time datetime="02-13-2020">JULY 11,2018 / BY JULIA STILES</time>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+
+            <div class="todo">
+                <div class="todo-imagen">
+                    <img src="images/imagenc2.PNG">
+                </div>
+                <div class="todito">
+                    <div class="todo-h1">
+                        <h1>Burger with fries</h1>
+                        <div class="todo-date">
+                            <time datetime="02-13-2020">JULY 11,2018 / BY JULIA STILES</time>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+
+            <div class="todo">
+                <div class="todo-imagen">
+                    <img src="images/imagenc3.PNG">
+                </div>
+                <div class="todito">
+                    <div class="todo-h1">
+                        <h1>Avocado & Oisters</h1>
+                        <div class="todo-date">
+                            <time datetime="02-13-2020">JULY 11,2018 / BY JULIA STILES</time>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+
+            <div class="todo">
+                <div class="todo-imagen">
+                    <img src="images/imagenc4.PNG">
+                </div>
+                <div class="todito">
+                    <div class="todo-h1">
+                        <h1>Tortillas prawns</h1>
+                        <div class="todo-date">
+                            <time datetime="02-13-2020">JULY 11,2018 / BY JULIA STILES</time>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+            <div class="todo">
+                <div class="todo-imagen">
+                    <img src="images/imagenc5.PNG">
+                </div>
+                <div class="todito">
+                    <div class="todo-h1">
+                        <h1>Burger with fries</h1>
+                        <div class="todo-date">
+                            <time datetime="02-13-2020">JULY 11,2018 / BY JULIA STILES</time>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+
+        </section>
+    </section>
+
+</body>
+
+</html>
