@@ -1,38 +1,125 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+html {
+    font-size: 62.5%;
+    /*Reset para REMS - 62.5% = 10px de 16px*/
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor-principal {
+    width: 95%;
+    max-width: 120rem;
+    /** 1200 px*/
+    margin: 0 auto;
+}
+
+
 /* Seccion Header */
+
 header {
     display: flex;
     position: sticky;
     top: 0;
-    width: 1330px;
     z-index: 3;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     padding-top: 10px;
 }
+
 header div.contenedor {
-    max-width: 1200px;
+    max-width: 1220px;
     margin: 10px auto;
 }
+
 header div.contenedor a {
     display: flex;
     justify-content: center;
     height: 10vh;
     min-height: 100px;
 }
-header nav.home  {
-   justify-content: flex-start;
+
+header nav.navegacion {
+    justify-content: flex-start;
     display: inline-block;
-    margin: 10px 200px;
-    padding-top: 5 px;
+    margin: 10px 20px;
+    padding-top: 5px;
 }
+
 .home a:hover {
-  color: #b0c346;
+    color: #b0c346;
 }
-header nav.home a{
-    color: black; 
+
+
+/***Navegacion **/
+
+header nav.navegacion a {
+    color: black;
     text-decoration: none;
-    padding: 10px; 
+    font-size: 2.2rem;
+    /*18 px*/
+    display: flex;
 }
+
+@media (min-width: 768px) {
+    header nav.navegacion a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.8rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+
+header nav.navegacion a:hover {
+    color: #71b100;
+}
+
+
+/** Menu Movil **/
+
+div.menu-movil {
+    width: 60px;
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+    header div.menu-movil {
+        display: none;
+    }
+}
+
+header nav.navegacion {
+    display: none;
+}
+
+header nav.navegacion:target {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    header nav.navegacion {
+        display: block;
+    }
+}
+
+header div.contenedor div.menu-movil a i {
+    color: black;
+    font-size: 10rem;
+    margin-left: 350px;
+}
+
+
 /*****/
 
 
@@ -44,9 +131,9 @@ section.awSlider .carousel {
     -moz-box-shadow: 0 0 4px #444;
     -webkit-box-shadow: 0 0 4px #444;
     box-shadow: 0 0 15px rgba(1, 1, 1, .5);
-  }
-  
-  section.awSlider {
+}
+
+section.awSlider {
     margin: 30px auto;
     padding: 30px;
     position: relative;
@@ -57,25 +144,32 @@ section.awSlider .carousel {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  section.awSlider div.carousel div.carousel-inner div.item img {
-    height: 450px;
-    width: 850px;
-  }
-  
-  section.awSlider:hover>img {
+}
+
+section.awSlider div.carousel div.carousel-inner div.item img {
+    height: 250px;
+    width: 400px;
+}
+
+@media (min-width: 768px) {
+    section.awSlider div.carousel div.carousel-inner div.item img {
+        height: 650px;
+        width: 1000px;
+    }
+}
+
+section.awSlider:hover>img {
     -ms-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     opacity: 1;
-  }
-  
-  section.awSlider img {
-    pointer-events: none; 
-  }
-  
-  section.awSlider>img {
+}
+
+section.awSlider img {
+    pointer-events: none;
+}
+
+section.awSlider>img {
     position: absolute;
     width: 600px;
     top: 30px;
@@ -90,39 +184,49 @@ section.awSlider .carousel {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     opacity: .5;
-  }
-
-section.awSlider div.carousel div.carousel-inner div.carousel-caption{
-    position: absolute;
-    justify-content: center;
-    /*bottom: 100;
-    left: 100; */
-    margin: 150px 150px;
-   /* background-color: rgba(255, 255, 255, 0.795);*/
-    padding:  10px;
-    color: black;
 }
 
+section.awSlider div.carousel div.carousel-inner div.carousel-caption {
+    position: absolute;
+    justify-content: center;
+    margin: 4px 4px;
+    color: black;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    section.awSlider div.carousel div.carousel-inner div.carousel-caption {
+        margin: 220px 220px;
+    }
+}
+
+
+/**********************************************************************************/
+
+
 /* Estilos Cards Ismael */
-div.container{
+
+div.container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-div.main-container-images{
+div.main-container-images {
     display: flex;
-    position: relative;  
+    position: relative;
     align-items: center;
-    justify-content: center;      
+    justify-content: center;
+    margin: 0;
 }
 
-div.main-container-images img{
+div.main-container-images img {
     width: 300px;
-    height: 300px;    
+    height: 300px;
+    margin: 0;
 }
 
-div.main-container-images-fondo{
+div.main-container-images-fondo {
     display: flex;
     position: absolute;
     background-color: #ffffff;
@@ -131,8 +235,7 @@ div.main-container-images-fondo{
     text-align: center;
     align-items: center;
     justify-content: center;
-
-}  
+}
 
 div.main-container-images-marco {
     border: 5px solid #b0c364;
@@ -143,183 +246,228 @@ div.main-container-images-marco {
     color: black;
 }
 
-div.main-container-images-marco p{
-    margin-bottom: 2px;
-    
-    
+@media (min-width: 768px) {
+    .tres-columnas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
-div.main-container-images-marco h2{
-    margin-top: 2px;
 
+
+/*********************/
+
+div.main-container-images-marco p {
+    margin-bottom: 2px;
+}
+
+div.main-container-images-marco h2 {
+    margin-top: 2px;
 }
 
 .main-container-images-marco a {
-  text-decoration: none;
-  color: black;
-}
-.main-container-images-marco a:hover {
-  text-decoration: none;
-  color: black;
-}
-/*Cards Segunda seccion Cesar*/
-div.main-card{
-    position: relative;
-    width: 100%;
-    display: flex;
-    box-sizing: border-box;
-    padding: 170px;
-    padding-bottom: 0px;
-    padding-top: 50px;
-}
-div.card-horizontal img{
-    width: 50%;
-    height: 100%;
-    float: left;
-    padding: 5px;
-}
-div.card-horizontal div.card-horizontal-content{
-    width: 50%;
-    height: auto;
-    float: right;
-    text-align: center;
-    margin-top: 30px;
-}
-div.main-card-right{
-    position: relative;
-    width: 100%;
-    display: flex;
-    box-sizing: border-box;
-    padding: 170px;
-    padding-top: 5px;
+    text-decoration: none;
+    color: black;
 }
 
-div.card-horizontal-right img{
-    width: 50%;
-    height: auto;
-    float: right;
-    padding: 10px;
-    padding-left: -90px;
+.main-container-images-marco a:hover {
+    text-decoration: none;
+    color: black;
 }
-div.card-horizontal-right div.card-horizontal-content{
-    width: 50%;
-    height: auto;
-    float: left;
+
+
+/*Cards Segunda seccion Cesar*/
+
+
+/**************************************************/
+
+
+/** Seccion Inferior Cesar**/
+
+.seccion-inferior {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+@media (min-width: 768px) {
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion-inferior .blog {
+        flex-basis: 72%;
+    }
+    .seccion-inferior .testimoniales {
+        flex-basis: calc(40% - 2rem);
+    }
+}
+
+.entrada-blog {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.entrada-blog:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog .imagen {
+        flex-basis: 50%;
+    }
+    .entrada-blog .texto-entrada {
+        flex-basis: calc(50% - 3rem);
+    }
+}
+
+.texto-entrada a {
+    color: black;
+    text-decoration: none;
+}
+
+.texto-entrada h4,
+h2,
+time {
+    margin: 0;
+    line-height: 1.4;
     text-align: center;
-    margin-top: 30px;
 }
-h4{
+
+.texto-entrada span {
+    color: #e08709;
+}
+
+h4 {
     display: block;
     color: #b0c364;
     font-size: 12px;
 }
-p{
+
+p {
     color: #7a7a7a;
     font-size: 0.8em;
     line-height: 2.5em;
 }
-time{
+
+time {
     color: #7a7a7a;
     font-size: 10px;
     padding: 5px 10px 20px 10px;
     display: block;
 }
-div.card-horizontal-button{
+
+div.card-horizontal-button {
     padding: 20px 20px auto 10px;
+    text-align: center;
 }
-div button{
+
+div button {
     background-color: #b0c364;
     color: white;
     font-weight: bold;
     padding: 15px 40px 15px 40px;
     border: none;
 }
-.clear-float {
-    clear: both;
-}
 
-/* Cards Vane  */
- section.gen{
+section.gen {
     font-family: "Montserrat", sans-serif;
     display: grid;
     grid-template-columns: 75% 25%;
     grid-template-rows: 10vw 30vw 10vw;
     grid-gap: 1em;
     margin: -81px auto;
-    max-width: 70em;
     padding: 1em 0;
- }
+}
 
- div.main-content{
+div.main-content {
     width: auto;
     display: flex;
     box-sizing: border-box;
-    float: left;
     margin: 15px;
-    
-   }
-   div.main-content div.main-content-image img{
-     width: 300px;
-     height: 280px;
-   }
-   div.main-content-third{
-     padding: 20px;
-     padding-bottom: 0px;
-     padding-top: 0;
-     margin-top: -12px;
-     border: 900px;
-   }
-   div.main-content-h1 p{
-     color: #b0c346;
-     font-size: 13px;
-     font-weight: bolder;
-   }
-   div.main-content-h2 h2{
-     font-weight: bolder;
-     font-size: 25px;
-   }
-   div.main-content-h2 div.main-content-date time{
-     color: #7a7a7a;
-     margin-top: -13px;
-     font-size: 10px;
-     font-weight: bold;
-     margin-left: -8px;
-   }
-   div.main-content-text{
-     text-align: justify;
-     color: #7a7a7a;
-     font-size: small;
-     font-weight: 100;
-     margin-top: 26px;
-   }
-   .clear{
-     clear: both;
-   }
+}
 
-   /*Cards 2*/
-div.todo{
-  display: flex;
-  margin-top: 20px;
-    float: right;
+div.main-content div.main-content-image img {
+    width: 300px;
+    height: 280px;
 }
-div.todo-imagen{
 
+div.main-content-third {
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-top: 0;
+    margin-top: -12px;
+    border: 900px;
 }
-div.todito{
-  margin-left: 20px;
-  margin-top: -8px;
+
+div.main-content-h1 p {
+    color: #b0c346;
+    font-size: 13px;
+    font-weight: bolder;
 }
-div.todo-h1 h1{
-  font-size: 14px;
-  font-weight: bolder;
+
+div.main-content-h2 h2 {
+    font-weight: bolder;
+    font-size: 25px;
 }
-div.todo-date time{
-  font-size: 8px;
-  color: #7a7a7a;
-  font-weight: bold;
-  margin-left: -8px;
+
+div.main-content-h2 div.main-content-date time {
+    color: #7a7a7a;
+    margin-top: -13px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: -8px;
 }
-.clear{
-  clear: both;
+
+div.main-content-text {
+    text-align: justify;
+    color: #7a7a7a;
+    font-size: small;
+    font-weight: 100;
+    margin-top: 26px;
 }
-   
-  
+
+.clear {
+    clear: both;
+}
+
+
+/*Cards 2*/
+
+div.todo {
+    display: flex;
+    margin: 0 auto;
+}
+
+div.todito {
+    margin-left: 20px;
+    margin-top: -8px;
+}
+
+div.todo-h1 h1 {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+div.todo-date time {
+    font-size: 8px;
+    color: #7a7a7a;
+    font-weight: bold;
+    margin-left: -8px;
+}
+
+@media (min-width: 768px) {
+    .dos-columnas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.centrar {
+    margin: 0 auto;
+}
