@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  font-family: "Montserrat", sans-serif;
+}
+    /* CONTENT */
+section.main {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  column-gap: 2rem;
+  margin-top: 4%;
+}
+
+div.two-columns {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  column-gap: 1.5rem;
+  margin-top: 2.5%;
+}
+
+section.main img {
+  width: 100%;
+  max-width: 100%;
+}
+
+div.second-container {
+  margin-top: -3%;
+}
+
+div.second-container p {
+  color: #b0c346;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+div.second-container span.green {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+div.left div.two-columns time {
+  color: #7a7a7a;
+  font-size: 12px;
+  font-weight: bolder;
+  padding: 0;
+  display: block;
+}
+
+div.second-container p.gray {
+  color: #7a7a7a;
+  font-size: 14px;
+  margin-top: 5%;
+  font-weight: lighter;
+}
+
+div.right div.two-columns span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+div.right div.two-columns time {
+  font-size: 9px;
+  color: #7a7a7a;
+  font-weight: 600;
+  padding: 0;
+  margin-top: 10%;
+  display: block;
+}
+
+div.button button{
+  font-family: "Montserrat", sans-serif;
+  background-color: #e7e1e1;
+  padding: 1.2%;
+  border: #e7e1e1;
+  color: #7a7a7a;
+  font-weight: bold;
+  margin-top: 10%;
+}
+
+section.main div.button button:hover{
+  background: #c0d44c;
+}
+
+footer{
+  color: #7a7a7a;
+}
+@media screen and (max-width: 768px) {
+  section.main {
+      display: grid;
+      grid-template-columns: 100%;
+      margin: 0 auto;
+  }
+
+  div.second-container {
+      display: grid;
+      grid-template-columns: 100%;
+  }
+
+  div.left div.two-columns {
+      display: grid;
+      grid-template-columns: 100%;
+  } 
+
+  div.right div.two-columns img {
+      width: 90%;
+  }
+
+  div.right div.two-columns time {
+      margin-top: 2%;
+  }
+
+  div.right div.two-columns {
+      margin-top: 4%;
+  }
+  
+  div.left div.two-columns div.one img {
+      width: 40%;
+  }
+}
+
+div.footer p{ 
+  color: #7a7a7a;
+  margin-top: 10%;
+}
